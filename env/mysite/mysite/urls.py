@@ -12,5 +12,6 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^registration/', 'myapp.views.registration', name='registration' ),
+    url(r'^consumer_Dashboard/', 'myapp.views.consumer_Dashboard', name='consumer_Dashboard' ),
     
 )
