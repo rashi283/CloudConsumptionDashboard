@@ -21,3 +21,8 @@ def registration(request):
         return HttpResponse('Registration successful')
         
     return render_to_response('registration.html', locals(), context_instance=RequestContext(request) )
+
+
+def consumer_Dashboard(request):
+    return render_to_response('consumer_Dashboard.html', locals(), context_instance=RequestContext(request))
+
