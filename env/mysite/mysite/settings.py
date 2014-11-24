@@ -97,4 +97,7 @@ if DEBUG:
         os.path.join(os.path.dirname(BASE_DIR), "static", "static"),
     )
 
+import django.contrib.auth
+django.contrib.auth.LOGIN_URL = '/'
+
 
