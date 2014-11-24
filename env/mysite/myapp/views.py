@@ -29,6 +29,9 @@ def registration(request):
 
 def consumer_Dashboard(request):
     return render_to_response('consumer_Dashboard.html', locals(), context_instance=RequestContext(request))
+	
+def provider_Dashboard(request):
+    return render_to_response('provider_Dashboard.html', locals(), context_instance=RequestContext(request))
 
 def index(request):
     return render_to_response('index.html', locals(), context_instance=RequestContext(request))
