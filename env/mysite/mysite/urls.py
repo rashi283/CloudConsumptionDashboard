@@ -15,7 +15,7 @@ urlpatterns = patterns('',
     url(r'^registration/', 'myapp.views.registration', name='registration' ),
     url(r'^consumer_Dashboard/', 'myapp.views.consumer_Dashboard', name='consumer_Dashboard' ),
     url(r'^provider_Dashboard/', 'myapp.views.consumer_Dashboard', name='provider_Dashboard' ),
-	
+    
     url(r'^$', 'django.contrib.auth.views.login'),
     url(r'^logout/$', logout_page),
     url(r'^accounts/login/$', 'django.contrib.auth.views.login'), # If user is not login it will redirect to login page
