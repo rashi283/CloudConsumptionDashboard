@@ -1,4 +1,5 @@
 $(document).ready(function() {
+ 
   options_CPU = {
                 chart: {
                     renderTo: 'CPU_Utilization',
@@ -76,8 +77,8 @@ $(document).ready(function() {
             
             $.getJSON("/static/consumer_CPU_24hrs.json", function(json) {
                //alert(json['category']);
-               // alert(json['name']);
-                alert(json['data']);
+               //alert(json['name']);
+               // alert(json['data']);
                 options_CPU.series[0].name = json['name'];
                 options_CPU.series[0].data = json['data'];
                 options_CPU.xAxis.categories = json['category'];
