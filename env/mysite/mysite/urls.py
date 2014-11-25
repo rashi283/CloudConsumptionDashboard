@@ -14,7 +14,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^registration/', 'myapp.views.registration', name='registration' ),
     url(r'^consumer_Dashboard/', 'myapp.views.consumer_Dashboard', name='consumer_Dashboard' ),
-    url(r'^provider_Dashboard/', 'myapp.views.consumer_Dashboard', name='provider_Dashboard' ),
+    url(r'^provider_Dashboard/', 'myapp.views.provider_Dashboard', name='provider_Dashboard' ),
     
     url(r'^$', 'django.contrib.auth.views.login'),
     url(r'^logout/$', logout_page),
