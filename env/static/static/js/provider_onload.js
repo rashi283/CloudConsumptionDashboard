@@ -92,6 +92,17 @@ $(document).ready(function() {
                 chart.xAxis[0].isDirty = true;
                 chart.redraw();
             });
+			
+			 $.getJSON("/static/consumer3_CPU_24hrs.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
+            });
            //CPU Utilization end
             
             
@@ -194,6 +205,17 @@ $(document).ready(function() {
                 chart.xAxis[0].isDirty = true;
                 chart.redraw();
             });
+			
+			 $.getJSON("/static/consumer3_Memory_24hrs.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
+            });
  //Disk Utilization
  
              options_Disk = {
@@ -281,6 +303,17 @@ $(document).ready(function() {
             });
 			
 			 $.getJSON("/static/consumer2_Disk_24hrs.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
+            });
+			
+			$.getJSON("/static/consumer3_Disk_24hrs.json", function(json) {
                //alert(json['category']);
                // alert(json['name']);
                 //alert(json['data']);
