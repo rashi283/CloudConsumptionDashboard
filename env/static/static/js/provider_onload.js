@@ -7,9 +7,6 @@ $(document).ready(function() {
                     marginRight: 80,
                    
                     marginBottom: 40,
-                    
-     
-                
                 },
                 plotOptions: {
                           series: {
@@ -43,7 +40,7 @@ $(document).ready(function() {
                 },
                 yAxis: {
                     title: {
-                        text:'Memory Consumption (GB)',
+                        text:'CPU Utilization (GB)',
                     },
                     plotLines: [{
                         value: 0,
@@ -99,7 +96,7 @@ $(document).ready(function() {
             
             
             
-            //Memeory Consumption
+            //Memory Consumption
             
             options_Memory = {
                 chart: {
@@ -186,6 +183,17 @@ $(document).ready(function() {
                 
                 chart = new Highcharts.Chart(options_Memory);
             });
+			
+			 $.getJSON("/static/consumer2_Memory_24hrs.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
+            });
  //Disk Utilization
  
              options_Disk = {
@@ -270,6 +278,17 @@ $(document).ready(function() {
                 options_Disk.xAxis.categories = json['category'];
                 
                 chart = new Highcharts.Chart(options_Disk);
+            });
+			
+			 $.getJSON("/static/consumer2_Disk_24hrs.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
             });
         });
 	
