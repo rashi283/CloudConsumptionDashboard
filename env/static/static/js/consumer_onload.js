@@ -4,7 +4,8 @@ $(document).ready(function() {
                     renderTo: 'CPU_Utilization',
                     type: 'spline',
                     marginRight: 100,
-                    marginBottom: 40
+                    marginBottom: 40,
+                    zoomType: 'xy'
                 },
                 title: {
                     text: '',
@@ -29,7 +30,7 @@ $(document).ready(function() {
                 },
                 yAxis: {
                     title: {
-                        text: '% CPU'
+                        text: '% CPU Utilization'
                     },
                     plotLines: [{
                         value: 0,
@@ -69,7 +70,7 @@ $(document).ready(function() {
                 series: [{}]
             };
             
-            $.getJSON("/static/consumer_CPU_24hrs.json", function(json) {
+            $.getJSON("/static/consumer/consumer_CPU_24hrs.json", function(json) {
                // alert(json['category']);
                // alert(json['name']);
                 //alert(json['data']);
@@ -89,7 +90,7 @@ $(document).ready(function() {
                     renderTo: 'Memory_Consumption',
                     type: 'column',
                     marginRight: 80,
-                   
+                    zoomType: 'xy',
                     marginBottom: 40,
                     
      
@@ -159,7 +160,7 @@ $(document).ready(function() {
                 series: [{}]
             };
             
-            $.getJSON("/static/consumer_Memory_24hrs.json", function(json) {
+            $.getJSON("/static/consumer/consumer_Memory_24hrs.json", function(json) {
                //alert(json['category']);
                // alert(json['name']);
                 //alert(json['data']);
@@ -181,6 +182,7 @@ $(document).ready(function() {
                     type: 'areaspline',
                     marginRight: 80,
                     marginBottom: 40,
+                    zoomType: 'xy'
                     
                         },    
                 colors: ['#66CCCC', '#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],
@@ -246,7 +248,7 @@ $(document).ready(function() {
                 series: [{}]
             };
             
-            $.getJSON("/static/consumer_Disk_24hrs.json", function(json) {
+            $.getJSON("/static/consumer/consumer_Disk_24hrs.json", function(json) {
                // alert(json['category']);
                // alert(json['name']);
                 //alert(json['data']);

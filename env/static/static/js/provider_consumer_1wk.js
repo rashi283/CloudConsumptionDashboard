@@ -11,11 +11,10 @@ $(document).ready(function() {
                     renderTo: 'CPU_Utilization',
                     type: 'line',
                     marginRight: 100,
-                    marginBottom: 65,
-                    zoomType: 'xy'
+                    marginBottom: 65
                 },
                 title: {
-                    text: '',
+                    text: 'CPU Utilization',
                     x: -20 //center
                 },
                 subtitle: {
@@ -53,10 +52,6 @@ $(document).ready(function() {
                     }
                 },
                 legend: {
-                        itemStyle: {
-                                    font: '9pt Trebuchet MS, Verdana, sans-serif',
-                                    color: '#A0A0A0'
-                                    },
                     layout: 'vertical',
                     align: 'right',
                     verticalAlign: 'top',
@@ -77,12 +72,36 @@ $(document).ready(function() {
                 series: [{}]
             };
             
-            $.getJSON("/static/consumer/consumer_CPU_1wk.json", function(json) {
+            $.getJSON("/static/consumer_CPU_1wk.json", function(json) {
                 options.series[0].name = json['name'];
                 options.series[0].data = json['data'];
                 options.xAxis.categories = json['category'];
                 chart = new Highcharts.Chart(options);
             });
+            
+            $.getJSON("/static/consumer2_CPU_1wk.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
+            });
+			
+            $.getJSON("/static/consumer3_CPU_1wk.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
+            });
+
+  
     });//1 wk
     
 
@@ -94,8 +113,7 @@ $(document).ready(function() {
                     renderTo: 'Disk_Utilization',
                     type: 'areaspline',
                     marginRight: 100,
-                    marginBottom: 65,
-                    zoomType: 'xy'
+                    marginBottom: 65
                 },
                    colors: ['#66CCCC', '#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],
                 title: {
@@ -159,13 +177,38 @@ $(document).ready(function() {
                 series: [{}]
             };
             
-            $.getJSON("/static/consumer/consumer_Disk_1wk.json", function(json) {
+            $.getJSON("/static/consumer_Disk_1wk.json", function(json) {
                 options_Disk.series[0].name = json['name'];
                 options_Disk.series[0].data = json['data'];
                 options_Disk.xAxis.categories = json['category'];
                 
                 chart = new Highcharts.Chart(options_Disk);
             });
+            
+            
+            $.getJSON("/static/consumer2_Disk_1wk.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
+            });
+			
+	    $.getJSON("/static/consumer3_Disk_1wk.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
+            });
+
+  
     });//end Disk 1 wk
     
     // Memory Consumption 1wk
@@ -175,8 +218,7 @@ $(document).ready(function() {
                     renderTo: 'Memory_Consumption',
                     type: 'column',
                     marginRight: 100,
-                    marginBottom: 65,
-                    zoomType: 'xy'
+                    marginBottom: 65
                 },
                    colors: ['#888888','#7cb5ec', '#434348', '#90ed7d', '#f7a35c', '#8085e9', '#f15c80', '#e4d354', '#8085e8', '#8d4653', '#91e8e1'],
                 title: {
@@ -240,14 +282,38 @@ $(document).ready(function() {
                 series: [{}]
             };
             
-            $.getJSON("/static/consumer/consumer_Memory_1wk.json", function(json) {
+            $.getJSON("/static/consumer_Memory_1wk.json", function(json) {
                 options_Memory.series[0].name = json['name'];
                 options_Memory.series[0].data = json['data'];
                 options_Memory.xAxis.categories = json['category'];
                 
                 chart = new Highcharts.Chart(options_Memory);
             });
+            
 			
+	    $.getJSON("/static/consumer2_Memory_1wk.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
+            });
+			
+	    $.getJSON("/static/consumer3_Memory_1wk.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
+            });
+
+  
     });//Memory end 1 wk
     
     

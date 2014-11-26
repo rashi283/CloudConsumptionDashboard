@@ -84,7 +84,30 @@ $(document).ready(function() {
                 
                 chart = new Highcharts.Chart(options);
             });
+	    
+	    $.getJSON("/static/consumer2_CPU_1wk.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
+            });
+			
+	  $.getJSON("/static/consumer3_CPU_1wk.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
+            });
 
+  
     });//1 wk
 
 });//on load

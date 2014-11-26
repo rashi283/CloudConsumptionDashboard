@@ -11,8 +11,7 @@ $("#CPU_24hrs").click(function() {
                     renderTo: 'CPU_Utilization',
                     type: 'spline',
                     marginRight: 100,
-                    marginBottom: 40,
-                     zoomType: 'xy'
+                    marginBottom: 40
                 },
                 title: {
                     text: '',
@@ -77,7 +76,7 @@ $("#CPU_24hrs").click(function() {
                 series: [{}]
             };
             
-            $.getJSON("/static/consumer/consumer_CPU_24hrs.json", function(json) {
+            $.getJSON("/static/consumer_CPU_24hrs.json", function(json) {
                // alert(json['category']);
                // alert(json['name']);
                 //alert(json['data']);
@@ -86,7 +85,35 @@ $("#CPU_24hrs").click(function() {
                 options_CPU.xAxis.categories = json['category'];
                 
                 chart = new Highcharts.Chart(options_CPU);
-            });//CPU Utilization end
+            });
+            
+            
+            $.getJSON("/static/consumer2_CPU_24hrs.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
+            });
+			
+	    $.getJSON("/static/consumer3_CPU_24hrs.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
+            });
+            
+
+            
+            
+            //CPU Utilization end
 });
        
             //Memeory Consumption
@@ -99,7 +126,9 @@ $("#CPU_24hrs").click(function() {
                     marginRight: 80,
                    
                     marginBottom: 40,
-                     zoomType: 'xy'
+                    
+     
+                
                 },
                 plotOptions: {
                           series: {
@@ -165,7 +194,7 @@ $("#CPU_24hrs").click(function() {
                 series: [{}]
             };
             
-            $.getJSON("/static/consumer/consumer_Memory_24hrs.json", function(json) {
+            $.getJSON("/static/consumer_Memory_24hrs.json", function(json) {
                //alert(json['category']);
                // alert(json['name']);
                 //alert(json['data']);
@@ -174,6 +203,29 @@ $("#CPU_24hrs").click(function() {
                 options_Memory.xAxis.categories = json['category'];
                 
                 chart = new Highcharts.Chart(options_Memory);
+            });
+            
+            
+            $.getJSON("/static/consumer2_Memory_24hrs.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
+            });
+			
+	    $.getJSON("/static/consumer3_Memory_24hrs.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
             });
 });
        
@@ -188,7 +240,7 @@ $("#CPU_24hrs").click(function() {
                     type: 'areaspline',
                     marginRight: 80,
                     marginBottom: 40,
-                     zoomType: 'xy'
+                    
                         },    
                 colors: ['#66CCCC', '#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],
                 title: {
@@ -253,7 +305,7 @@ $("#CPU_24hrs").click(function() {
                 series: [{}]
             };
             
-            $.getJSON("/static/consomer/consumer_Disk_24hrs.json", function(json) {
+            $.getJSON("/static/consumer_Disk_24hrs.json", function(json) {
                // alert(json['category']);
                // alert(json['name']);
                 //alert(json['data']);
@@ -262,6 +314,28 @@ $("#CPU_24hrs").click(function() {
                 options_Disk.xAxis.categories = json['category'];
                 
                 chart = new Highcharts.Chart(options_Disk);
+            });
+            
+            $.getJSON("/static/consumer2_Disk_24hrs.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
+            });
+			
+	    $.getJSON("/static/consumer3_Disk_24hrs.json", function(json) {
+               //alert(json['category']);
+               // alert(json['name']);
+                //alert(json['data']);
+              
+                chart.addSeries({name: json['name'],
+                data: json['data']},true);
+                chart.xAxis[0].isDirty = true;
+                chart.redraw();
             });
         });
 });
