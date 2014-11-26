@@ -29,7 +29,7 @@ $(document).ready(function() {
                 },
                 yAxis: {
                     title: {
-                        text: '% CPU'
+                        text: '% CPU Utilization'
                     },
                     plotLines: [{
                         value: 0,
