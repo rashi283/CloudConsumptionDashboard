@@ -14,7 +14,7 @@ $(document).ready(function() {
                     marginBottom: 65
                 },
                 title: {
-                    text: 'CPU Utilization',
+                    text: '',
                     x: -20 //center
                 },
                 subtitle: {
@@ -56,7 +56,7 @@ $(document).ready(function() {
                     align: 'right',
                     verticalAlign: 'top',
                     x: -10,
-                    y: 50,
+                    y: 10,
                         floating: true,
                     borderWidth: 0
                 },

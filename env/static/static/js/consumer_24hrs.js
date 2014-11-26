@@ -36,7 +36,7 @@ $("#CPU_24hrs").click(function() {
                 },
                 yAxis: {
                     title: {
-                        text: '% CPU'
+                        text: '% CPU Utilization'
                     },
                     plotLines: [{
                         value: 0,
