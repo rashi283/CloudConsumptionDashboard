@@ -14,7 +14,7 @@ $(document).ready(function() {
                     marginBottom: 65
                 },
                 title: {
-                    text: '',
+                    text: 'CPU Utilization',
                     x: -20 //center
                 },
                 subtitle: {
@@ -56,7 +56,7 @@ $(document).ready(function() {
                     align: 'right',
                     verticalAlign: 'top',
                     x: -10,
-                    y: 10,
+                    y: 50,
                         floating: true,
                     borderWidth: 0
                 },
@@ -78,8 +78,6 @@ $(document).ready(function() {
                 options.xAxis.categories = json['category'];
                 chart = new Highcharts.Chart(options);
             });
-
-  
     });//1 wk
     
 
@@ -162,8 +160,6 @@ $(document).ready(function() {
                 
                 chart = new Highcharts.Chart(options_Disk);
             });
-
-  
     });//end Disk 1 wk
     
     // Memory Consumption 1wk
@@ -244,8 +240,7 @@ $(document).ready(function() {
                 
                 chart = new Highcharts.Chart(options_Memory);
             });
-
-  
+			
     });//Memory end 1 wk
     
     

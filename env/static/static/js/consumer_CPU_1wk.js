@@ -85,7 +85,6 @@ $(document).ready(function() {
                 chart = new Highcharts.Chart(options);
             });
 
-  
     });//1 wk
 
 });//on load
