@@ -12,7 +12,8 @@ $(document).ready(function() {
                     renderTo: 'CPU_Utilization',
                     type: 'line',
                     marginRight: 100,
-                    marginBottom: 65
+                    marginBottom: 65,
+		    zoomType: 'xy'
                 },
                 title: {
                     text: 'CPU Utilization',

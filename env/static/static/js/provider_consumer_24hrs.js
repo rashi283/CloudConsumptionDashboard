@@ -116,7 +116,7 @@ $("#CPU_24hrs").click(function() {
             //CPU Utilization end
 });
        
-            //Memeory Consumption
+            //Memory Consumption
             
   $("#Memory_24hrs").click(function() {
             options_Memory = {
@@ -124,11 +124,8 @@ $("#CPU_24hrs").click(function() {
                     renderTo: 'Memory_Consumption',
                     type: 'column',
                     marginRight: 80,
-                   
                     marginBottom: 40,
-                    
-     
-                
+                    zoomType: 'xy'
                 },
                 plotOptions: {
                           series: {
@@ -240,6 +237,7 @@ $("#CPU_24hrs").click(function() {
                     type: 'areaspline',
                     marginRight: 80,
                     marginBottom: 40,
+                    zoomType: 'xy'
                     
                         },    
                 colors: ['#66CCCC', '#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],

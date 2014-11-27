@@ -11,7 +11,8 @@ $(document).ready(function() {
                     renderTo: 'CPU_Utilization',
                     type: 'line',
                     marginRight: 100,
-                    marginBottom: 65
+                    marginBottom: 65,
+                    zoomType: 'xy'
                 },
                 title: {
                     text: 'CPU Utilization',
@@ -113,7 +114,8 @@ $(document).ready(function() {
                     renderTo: 'Disk_Utilization',
                     type: 'areaspline',
                     marginRight: 100,
-                    marginBottom: 65
+                    marginBottom: 65,
+                    zoomType: 'xy'
                 },
                    colors: ['#66CCCC', '#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],
                 title: {
@@ -218,7 +220,8 @@ $(document).ready(function() {
                     renderTo: 'Memory_Consumption',
                     type: 'column',
                     marginRight: 100,
-                    marginBottom: 65
+                    marginBottom: 65,
+                    zoomType: 'xy'
                 },
                    colors: ['#888888','#7cb5ec', '#434348', '#90ed7d', '#f7a35c', '#8085e9', '#f15c80', '#e4d354', '#8085e8', '#8d4653', '#91e8e1'],
                 title: {
