@@ -1,4 +1,4 @@
-#!/Users/rashiaa/assignments/CloudConsumptionDashboard/env/bin/python
+#!/home/ubuntu/CloudConsumptionDashboard/env/bin/python
 
 # -*- coding: utf-8 -*-
 import re

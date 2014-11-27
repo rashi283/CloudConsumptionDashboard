@@ -1,4 +1,4 @@
-#!/Users/rashiaa/assignments/CloudConsumptionDashboard/env/bin/python
+#!/home/ubuntu/CloudConsumptionDashboard/env/bin/python
 from django.core import management
 
 if __name__ == "__main__":
