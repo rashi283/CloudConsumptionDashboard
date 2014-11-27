@@ -1,5 +1,5 @@
 $(function(){
-	
+	console.log("im in function")
 	var pass1 = $('#password1'),
 		pass2 = $('#password2'),
 		email = $('#email'),
@@ -16,7 +16,8 @@ $(function(){
 		if($('#main .row.success').length == $('#main .row').length){
 			
 			// Yes!
-			alert("Thank you for trying out this demo!");
+			//alert("Thank you for trying out this demo!");
+			window.location.href = "/index" ;
 			e.preventDefault(); // Remove this to allow actual submission
 			
 		}

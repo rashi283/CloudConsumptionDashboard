@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
-        <meta charset="utf-8" />
+         <meta charset="utf-8" />
         <title>SpartanWare Registration</title>
         
         <!-- The stylesheet -->
@@ -11,16 +11,18 @@
           <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
     </head>
-    
     <body>
-
+        
         <div id="main">
         	
         	<h1>Register Now!</h1>
-        	
-        	<form class="" method="post" action="">
-        		
-        		<div class="row email">
+ 
+        <form class ="" method="post" action=".">{% csrf_token %}
+        <!--<table border="0">-->
+        <!--    {{ form.as_table }}-->
+        <!--</table>-->
+        
+        <div class="row email">
 	    			<input type="text" id="email" name="email" placeholder="Email" />
         		</div>
         		
@@ -39,34 +41,13 @@
         		<p class="meterText">Password Meter</p>
         		
         		<input type="submit" value="Register" />
-        		
-        	</form>
-        </div>
-        
-        <!--<footer>
-	        <h2><i>Tutorial:</i> Create a Beautiful Password Strength Indicator with CSS3</h2>
-            <a class="tzine" href="http://tutorialzine.com/2012/06/beautiful-password-strength-indicator/">Head on to <i>Tutorial<b>zine</b></i> to download this example</a>
-        </footer>-->
-        
+        </form>
+    
+    </div>
         <!-- JavaScript includes - jQuery, the complexify plugin and our own script.js -->
 		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 		<script src="/static/assets/js/jquery.complexify.js"></script>
 		<script src="/static/assets/js/script.js"></script>
-		     
     </body>
-
-
-<!--{% extends "base.html" %}
-{% block title %}User Registration{% endblock %}
-{% block head %}User Registration{% endblock %}
-{% block content %}
-    <form method="post" action=".">{% csrf_token %}
-        <table border="0">
-            {{ form.as_table }}
-        </table>
-        <input type="submit" value="Register" />
-    </form>
-    <a href="/">Login</a>
-{% endblock %}-->
-
 </html>
+    

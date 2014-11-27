@@ -15,7 +15,8 @@
 
 
 html{
-	background:url('http://i34.tinypic.com/m922bk.jpg') repeat center top #826e79;
+	background: #ffce54;
+	/*background:url('http://i34.tinypic.com/m922bk.jpg') repeat center top #826e79;*/
 }
 
 
@@ -145,13 +146,14 @@ h1{
     text-shadow: 0 -1px 0 #444444;
     width: 410px;
     
-	background-color:#0496DA;
+	background-color: rgba(72, 207, 173, 0.99);
+	/*background-color:#0496DA;
 	
 	background-image: linear-gradient(top, #0496DA 0%, #0067CD 100%);
 	background-image: -o-linear-gradient(top, #0496DA 0%, #0067CD 100%);
 	background-image: -moz-linear-gradient(top, #0496DA 0%, #0067CD 100%);
 	background-image: -webkit-linear-gradient(top, #0496DA 0%, #0067CD 100%);
-	background-image: -ms-linear-gradient(top, #0496DA 0%, #0067CD 100%);
+	background-image: -ms-linear-gradient(top, #0496DA 0%, #0067CD 100%);*/
 }
 
 #main form input[type=submit]:hover{
