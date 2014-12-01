@@ -31,7 +31,7 @@ $("#CPU_24hrs").click(function() {
 					x: -3,
 					y: 20,
 					formatter: function() {
-						return Highcharts.dateFormat('%l<br>%p', Date.parse(this.value +' UTC'));
+						return Highcharts.dateFormat('%l<br>%p', Date.parse(this.value.replace(/-/g,"/")  +' UTC'));
 					}
 				}
                 },
@@ -127,7 +127,7 @@ $("#CPU_24hrs").click(function() {
 					x: -3,
 					y: 20,
 					formatter: function() {
-						return Highcharts.dateFormat('%l<br>%p', Date.parse(this.value +' UTC'));
+						return Highcharts.dateFormat('%l<br>%p', Date.parse(this.value.replace(/-/g,"/")  +' UTC'));
 					}
 				}
                 },
@@ -210,7 +210,7 @@ $("#CPU_24hrs").click(function() {
 					x: -3,
 					y: 20,
 					formatter: function() {
-						return Highcharts.dateFormat('%l<br>%p', Date.parse(this.value +' UTC'));
+						return Highcharts.dateFormat('%l<br>%p', Date.parse(this.value.replace(/-/g,"/")  +' UTC'));
 					}
 				}
                 },
@@ -253,14 +253,13 @@ $("#CPU_24hrs").click(function() {
                 series: [{}]
             };
             
-            $.getJSON("/static/consomer/consumer_Disk_24hrs.json", function(json) {
+            $.getJSON("/static/consumer/consumer_Disk_24hrs.json", function(json) {
                // alert(json['category']);
                // alert(json['name']);
                 //alert(json['data']);
                 options_Disk.series[0].name = json['name'];
                 options_Disk.series[0].data = json['data'];
                 options_Disk.xAxis.categories = json['category'];
-                
                 chart = new Highcharts.Chart(options_Disk);
             });
         });

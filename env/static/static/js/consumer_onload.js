@@ -24,7 +24,11 @@ $(document).ready(function() {
 					x: -3,
 					y: 20,
 					formatter: function() {
-						return Highcharts.dateFormat('%l<br>%p', Date.parse(this.value +' UTC'));
+                                              /* var d= this.value;
+                                               var d= d.replace(/-/g,"/");*/
+                                               
+						return Highcharts.dateFormat('%l<br>%p', Date.parse(this.value.replace(/-/g,"/") +' UTC'));
+                                    
 					}
 				}
                 },
@@ -71,7 +75,7 @@ $(document).ready(function() {
             };
             
             $.getJSON("/static/consumer/consumer_CPU_24hrs.json", function(json) {
-               // alert(json['category']);
+                //alert(json['category']);
                // alert(json['name']);
                 //alert(json['data']);
                 options_CPU.series[0].name = json['name'];
@@ -122,7 +126,7 @@ $(document).ready(function() {
 					x: -3,
 					y: 20,
 					formatter: function() {
-						return Highcharts.dateFormat('%l<br>%p', Date.parse(this.value +' UTC'));
+						return Highcharts.dateFormat('%l<br>%p', Date.parse(this.value.replace(/-/g,"/")  +' UTC'));
 					}
 				}
                 },
@@ -205,7 +209,7 @@ $(document).ready(function() {
 					x: -3,
 					y: 20,
 					formatter: function() {
-						return Highcharts.dateFormat('%l<br>%p', Date.parse(this.value +' UTC'));
+						return Highcharts.dateFormat('%l<br>%p', Date.parse(this.value.replace(/-/g,"/")  +' UTC'));
 					}
 				}
                 },
