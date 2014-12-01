@@ -30,7 +30,7 @@ $(document).ready(function() {
 					x: -3,
 					y: 20,
 					formatter: function() {
-						return Highcharts.dateFormat('%e%b :%l%p', Date.parse(this.value +' UTC'));
+						return Highcharts.dateFormat('%e%b :%l%p', Date.parse(this.value.replace(/-/g,"/")  +' UTC'));
 					}
 				
                 }
@@ -99,7 +99,7 @@ $(document).ready(function() {
                 },
                    colors: ['#66CCCC', '#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],
                 title: {
-                    text: 'Disk Utilization (GB)',
+                    text: '',
                     x: -20 //center
                 },
                 subtitle: {
@@ -115,14 +115,14 @@ $(document).ready(function() {
 					x: -3,
 					y: 20,
 					formatter: function() {
-						return Highcharts.dateFormat('%e%b :%l%p', Date.parse(this.value +' UTC'));
+						return Highcharts.dateFormat('%e%b :%l%p', Date.parse(this.value.replace(/-/g,"/")  +' UTC'));
 					}
 				
                 }
                 },
                 yAxis: {
                     title: {
-                        text: 'Memory Consumption (GB)'
+                        text: 'Disk Utilization (GB)'
                     },
                     plotLines: [{
                         value: 0,
@@ -196,7 +196,7 @@ $(document).ready(function() {
 					x: -3,
 					y: 20,
 					formatter: function() {
-						return Highcharts.dateFormat('%e%b :%l%p', Date.parse(this.value +' UTC'));
+						return Highcharts.dateFormat('%e%b :%l%p', Date.parse(this.value.replace(/-/g,"/")  +' UTC'));
 					}
 				
                 }
