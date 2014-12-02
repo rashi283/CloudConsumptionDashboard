@@ -36,10 +36,12 @@ $(document).ready(function() {
                     title: {
                         text: '% CPU Utilization'
                     },
+                    
+            
                     plotLines: [{
                         value: 0,
                         width: 1,
-                        color: '#808080'
+                        color: '#FF0000'
                     }]
                 },
                 tooltip: {
@@ -58,13 +60,13 @@ $(document).ready(function() {
                     floating: true,
                     verticalAlign: 'top',
                     x: -10,
-                    y: 10,
+                    y: 25,
                     borderWidth: 0
                 },
                 plotOptions: {
                          series: {
                                      marker: {
-                                        fillColor: '#FFFFFF',
+                                        fillColor: '#0033CC',
                                         lineWidth: 2,
                                         lineColor: null // inherit from series
                                                 }
@@ -106,7 +108,7 @@ $(document).ready(function() {
                                     }
                 },
                         
-            colors: ['#888888','#7cb5ec', '#434348', '#90ed7d', '#f7a35c', '#8085e9', '#f15c80', '#e4d354', '#8085e8', '#8d4653', '#91e8e1'],
+            colors: ['#3399CC','#3366CC','#888888','#7cb5ec', '#434348', '#90ed7d', '#f7a35c', '#8085e9', '#f15c80', '#e4d354', '#8085e8', '#8d4653', '#91e8e1'],
                 title: {
                     text: '',
                     style: {
@@ -156,7 +158,7 @@ $(document).ready(function() {
                     align: 'right',
                     verticalAlign: 'top',
                     x: -10,
-                    y: 10,
+                    y: 20,
                     floating:true,
                     borderWidth: 0
                 },
@@ -245,7 +247,7 @@ $(document).ready(function() {
                     floating: true,
                     verticalAlign: 'top',
                     x: -10,
-                    y: 10,
+                    y: 20,
                     borderWidth: 0
                 },
                 

@@ -20,9 +20,8 @@
      <link href="/static/css/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
-	<script type="text/javascript" src="https://code.highcharts.com/highcharts-more.js"</script>
-        <script type="text/javascript" src="http://code.highcharts.com/modules/exporting.js"></script>
+       <script src="http://code.highcharts.com/highcharts.js"></script>
+       <script src="http://code.highcharts.com/modules/exporting.js"></script>
 	<script type="text/javascript" src="/static/js/consumer_onload.js"></script>
 	<script type="text/javascript" src="/static/js/consumer_1wk.js"></script>
 	<script type="text/javascript" src="/static/js/consumer_24hrs.js"></script>
@@ -55,7 +54,7 @@
                 <a class="navbar-brand" href="#"><img src="/static/img/SpartanWareLogo.jpg" style="height:150%; width:90%" alt="SpartanWare" title="SpartanWare" /></a>
             </div>
 	    <ul class="nav navbar-top-links navbar-right">
-                <li><span style= "font:10pt Trebuchet MS, Verdana, sans-serif">Welcome John !!   |</span></li>
+                <li><span style= "font:10pt Trebuchet MS, Verdana, sans-serif ; color:#787878  "><strong>Welcome John !! </strong>  |</span></li>
                  
                   <li><a href="/index"><span style= "font:10pt Trebuchet MS, Verdana, sans-serif">Logout</span></a> </li>
 	    </ul>
@@ -84,7 +83,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Dashboard</h1>
+                    <h1 class="page-header" style="color:#909090">Dashboard</h1>
                 </div><!-- /.col-lg-12 -->
             </div><!--row-->
             
@@ -100,7 +99,7 @@
                                     <!--<i class="fa fa-comments fa-5x"></i>-->
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">65%</div>
+                                    <div class="small">65%</div>
                                     <div>CPU Utilization</div>
                                 </div>
                             </div>
@@ -125,7 +124,7 @@
                                     <!--<i class="fa fa-tasks fa-5x">--></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">850 GB</div>
+                                    <div class="small">850 GB</div>
                                     <div>Disk Consumption</div>
                                 </div>
                             </div>
@@ -141,14 +140,14 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="panel panel-yellow">
+                    <div class="panel panel-red">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
                                     <!--<i class="fa fa-shopping-cart fa-5x"></i>-->
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">10 GB</div>
+                                    <div class="small">10 GB</div>
                                     <div>Memory Consumption</div>
                                 </div>
                             </div>
@@ -177,15 +176,16 @@
                             <div class="pull-right">
                                 <div class="btn-group">
 				<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-				    <span class="selection">24 hrs </span><span class="caret"></span>
+				    <span class="selection" style= "font:9pt Trebuchet MS, Verdana, sans-serif">24 hrs </span><span class="caret"></span>
 				</button>
 				
 				<ul class="dropdown-menu pull-right" role="menu">
-				    <li><a href="#" id="CPU_24hrs">24 hrs</a></li>
-				    <li><a href="#" id="CPU_1wk">1 week </a></li>
-				    <li><a href="#">1 month </a></li>
-				     <li><a href="#">6 months </a></li>
-				     <li><a href="#">1 year </a></li>
+				    <li><a href="#" id="CPU_24hrs"><span style= "font:9pt Trebuchet MS, Verdana, sans-serif">24 hrs </span></a></li>
+				    <li><a href="#" id="CPU_1wk"><span style= "font:9pt Trebuchet MS, Verdana, sans-serif">1 week </span></a></li>
+				    <li><a href="#"><span style= "font:9pt Trebuchet MS, Verdana, sans-serif">1 month </span></a></li>
+				     <li><a href="#"><span style= "font:9pt Trebuchet MS, Verdana, sans-serif">6 months </span></a></li>
+				      <li role="presentation" class="divider"></li>
+				     <li><a href="#"><span style= "font:9pt Trebuchet MS, Verdana, sans-serif">1 year </span></a></li>
 				    
 				</ul>
 				</div><!--btn-group-->
@@ -203,7 +203,9 @@
         </div><!--row-->
         
         
-        <br>
+       <br>
+       <br>
+       <br>
         
         <!-- /.row -->
             <div class="row">
@@ -214,15 +216,16 @@
                             <div class="pull-right">
                                 <div class="btn-group">
 				<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-				    <span class="selection">24 hrs </span><span class="caret"></span>
+				    <span class="selection" style= "font:9pt Trebuchet MS, Verdana, sans-serif">24 hrs </span><span class="caret"></span>
 				</button>
 				
 				<ul class="dropdown-menu pull-right" role="menu">
-				    <li><a href="#" id="Disk_24hrs">24 hrs</a></li>
-				    <li><a href="#" id="Disk_1wk">1 week </a></li>
-				    <li><a href="#">1 month </a></li>
-				     <li><a href="#">6 months </a></li>
-				     <li><a href="#">1 year </a></li>
+				    <li><a href="#" id="Disk_24hrs"><span style= "font:9pt Trebuchet MS, Verdana, sans-serif">24 hrs </span></a></li>
+				    <li><a href="#" id="Disk_1wk"><span style= "font:9pt Trebuchet MS, Verdana, sans-serif">1 week </span></a></li>
+				    <li><a href="#"><span style= "font:9pt Trebuchet MS, Verdana, sans-serif">1 month </span></a></li>
+				     <li><a href="#"><span style= "font:9pt Trebuchet MS, Verdana, sans-serif">6 months </span></a></li>
+				    <li role="presentation" class="divider"></li>
+				     <li><a href="#"><span style= "font:9pt Trebuchet MS, Verdana, sans-serif">1 year </span></a></li>
 				    
 				</ul>
 				</div><!--btn-group-->
@@ -244,15 +247,16 @@
                             <div class="pull-right">
                                  <div class="btn-group">
 				<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-				    <span class="selection">24 hrs </span><span class="caret"></span>
+				    <span class="selection" style= "font:9pt Trebuchet MS, Verdana, sans-serif  ">24 hrs </span><span class="caret"></span>
 				</button>
 				
-				<ul class="dropdown-menu pull-right" role="menu">
-				    <li><a href="#" id="Memory_24hrs">24 hrs</a></li>
-				    <li><a href="#" id="Memory_1wk">1 week </a></li>
-				    <li><a href="#">1 month </a></li>
-				     <li><a href="#">6 months </a></li>
-				     <li><a href="#">1 year </a></li>
+				<ul class="dropdown-menu pull-right" role="menu" style=>
+				    <li><a href="#" id="Memory_24hrs"><span style= "font:9pt Trebuchet MS, Verdana, sans-serif">24 hrs</span> </a></li>
+				    <li><a href="#" id="Memory_1wk"><span style= "font:9pt Trebuchet MS, Verdana, sans-serif  ">1 week</span> </a></li>
+				    <li><a href="#"><span style= "font:9pt Trebuchet MS, Verdana, sans-serif  ">1 month </span></a></li>
+				     <li><a href="#"><span style= "font:9pt Trebuchet MS, Verdana, sans-serif  ">6 months </span></a></li>
+				      <li role="presentation" class="divider"></li>
+				     <li><a href="#"><span style= "font:9pt Trebuchet MS, Verdana, sans-serif  ">1 year </span></a></li>
 				    
 				</ul>
 				</div><!--btn-group-->
@@ -281,7 +285,6 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="/static/js/plugins/metisMenu/metisMenu.min.js"></script>
 
-    <!-- Morris Charts JavaScript -->
    
     <!-- Custom Theme JavaScript -->
     <script src="/static/js/sb-admin-2.js"></script>
