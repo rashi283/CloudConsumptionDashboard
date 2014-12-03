@@ -9,6 +9,9 @@ from django.views.decorators.csrf import csrf_exempt
 #import requests
 import json
 from .models import registration
+from .models import cpu_data as cpu_data
+from django.views.generic import ListView
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .forms import RegistrationForm
 
 from myapp.forms import *
@@ -35,6 +38,27 @@ def provider_Dashboard(request):
 
 def index(request):
     return render_to_response('index.html', locals(), context_instance=RequestContext(request))
+
+#def cpu_pagination(ListView):
+#    queryset = cpu_data.objects.all()      # shorthand for setting queryset = models.Car.objects.all()
+#    template_name = '/cpu_pagination.html'  # optional (the default is app_name/modelNameInLowerCase_list.html; which will look into your templates folder for that path and file)
+#    context_object_name = "cpu_data"    #default is object_list as well as model's_verbose_name_list and/or model's_verbose_name_plural_list, if defined in the model's inner Meta class
+#    paginate_by = 10
+#    #return render_to_response('cpu_pagination.html', locals(), context_instance=RequestContext(request))
+
+def cpu_pagination(request):
+    cpu_data_list = cpu_data.objects.all()      # shorthand for setting queryset = models.Car.objects.all()
+    paginator = Paginator(cpu_data_list, 5)
+    page = request.GET.get('page')
+    try:
+        cpu_data_vals = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        cpu_data_vals = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        cpu_data_vals = paginator.page(paginator.num_pages)
+    return render_to_response('cpu_pagination.html', {"cpu_data_vals": cpu_data_vals})
 
 @csrf_protect
 def register(request):

@@ -23,5 +23,6 @@ urlpatterns = patterns('',
     url(r'^register/success/$', register_success),
     url(r'^home/$', home),
     url(r'^index/$', 'myapp.views.index', name="index"),
+    url(r'^cpu_pagination/$', 'myapp.views.cpu_pagination', name="cpu_pagination"),
     
 )
